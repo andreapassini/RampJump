@@ -122,7 +122,7 @@ BoxCollider2D:
   m_Offset: {x: -0.00000047683716, y: 0.57729745}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.47180453, y: 0.6652047}
     oldSize: {x: 21, y: 15.001465}
     newSize: {x: 21, y: 15.001465}
     adaptiveTilingThreshold: 0.5
@@ -141,10 +141,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8347492777242367732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4217e28e77217814b834a3b72a697bc2, type: 3}
+  m_Script: {fileID: 11500000, guid: 84146b15456d9bc4da00fed1915297d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitGroundEffect: {fileID: 9198730150549848720, guid: a09613c37498cc14d90401e2cc893716,
+  hitGroundEffect: {fileID: 9198730150549848720, guid: c2ccbd4ccc4b1244e92f84a7723428f7,
     type: 3}
-  hitDmgEffect: {fileID: 9198730150549848720, guid: b5344cf757003ec4b8583fe1fd73249d,
+  hitDmgEffect: {fileID: 9198730150549848720, guid: 8971bd4e38cf53b44aa4e3b2e77ed097,
     type: 3}
