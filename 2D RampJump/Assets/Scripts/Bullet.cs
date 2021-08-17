@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
 
 		_rigidbody2D = collision.rigidbody;
 
+		//Effetto diverso a seconda di cosa si colpisce
+		/*
 		
 		if (_rigidbody2D.tag == "Ground") {
 			GameObject effect = Instantiate(hitGroundEffect, transform.position, Quaternion.identity);
@@ -23,11 +25,11 @@ public class Bullet : MonoBehaviour
 			GameObject effect = Instantiate(hitDmgEffect, transform.position, Quaternion.identity);
 			Destroy(effect, 5f);
 		}
+
+		*/
 		
-		/*
 		GameObject effect = Instantiate(hitGroundEffect, transform.position, Quaternion.identity);
 		Destroy(effect, 2f);
 		Destroy(gameObject);
-		*/
 	}
 }
