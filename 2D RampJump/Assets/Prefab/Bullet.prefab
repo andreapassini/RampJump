@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8347492777242367732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.917, y: 0.172, z: 0}
-  m_LocalScale: {x: 0.11774085, y: 0.11774085, z: 0.11774085}
+  m_LocalScale: {x: 0.18286331, y: 0.18286331, z: 0.18286331}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -148,3 +148,4 @@ MonoBehaviour:
     type: 3}
   hitDmgEffect: {fileID: 9198730150549848720, guid: 8971bd4e38cf53b44aa4e3b2e77ed097,
     type: 3}
+  destroyAfterTime: 4

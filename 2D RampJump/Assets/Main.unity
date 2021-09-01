@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 221915207}
   - component: {fileID: 221915208}
   - component: {fileID: 221915209}
+  - component: {fileID: 221915210}
   m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
@@ -423,6 +424,23 @@ MonoBehaviour:
   camera: {fileID: 1000398611}
   player: {fileID: 820667350}
   gunPos: {fileID: 901854279}
+--- !u!114 &221915210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221915205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c892ca23fbeee864eb21778ce856f37f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 1791387870}
+  bulletPrfab: {fileID: 8347492777242367732, guid: 3b6ce2bc366c21545b46a18fd2da7358,
+    type: 3}
+  bulletForce: 15
+  rechargeTime: 0.45
 --- !u!1 &526753398
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +836,6 @@ GameObject:
   - component: {fileID: 820667357}
   - component: {fileID: 820667359}
   - component: {fileID: 820667358}
-  - component: {fileID: 820667360}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -1062,22 +1079,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 567
   groundCheck: {fileID: 1007352555}
---- !u!114 &820667360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820667350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c892ca23fbeee864eb21778ce856f37f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 1791387870}
-  bulletPrfab: {fileID: 8347492777242367732, guid: 3b6ce2bc366c21545b46a18fd2da7358,
-    type: 3}
-  bulletForce: 20
 --- !u!1 &848288304
 GameObject:
   m_ObjectHideFlags: 3
