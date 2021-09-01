@@ -11,6 +11,7 @@ public class TurnHead : MonoBehaviour
     Rigidbody2D rb;
 
     [SerializeField] GameObject player;
+    [SerializeField] GameObject gunPos;
 
     // Start is called before the first frame update
     void Awake()
@@ -26,7 +27,7 @@ public class TurnHead : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-        rb.position = player.transform.position;
+        rb.position = gunPos.transform.position;
 
         Vector2 directionToLook = mousePosition - rb.position;
         float angle = Mathf.Atan2(directionToLook.y, directionToLook.x) * Mathf.Rad2Deg - 90f;

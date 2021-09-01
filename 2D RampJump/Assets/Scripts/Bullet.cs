@@ -7,6 +7,13 @@ public class Bullet : MonoBehaviour
 	[SerializeField] GameObject hitGroundEffect;
 	[SerializeField] GameObject hitDmgEffect;
 
+	[SerializeField] float destroyAfterTime = 5f;
+
+	private void Start()
+	{
+		StartCoroutine(DestroyBulletAfterTime());
+	}
+
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		Rigidbody2D _rigidbody2D;
@@ -32,4 +39,11 @@ public class Bullet : MonoBehaviour
 		Destroy(effect, 2f);
 		Destroy(gameObject);
 	}
+
+	public IEnumerator DestroyBulletAfterTime()
+	{
+		yield return new WaitForSeconds(destroyAfterTime);
+		Destroy(gameObject);
+	}
 }
+
