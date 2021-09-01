@@ -8,17 +8,20 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     #region Variables
-    public GameObject losePanel;
+    //public GameObject losePanel;
 
     public Text healthDisplay;
     public int health;
+
+    [SerializeField] int startingHealth = 100;
     #endregion
 
     #region Unity Methods
 
     void Start()
     {
-        
+        health = startingHealth;
+        healthDisplay.text = health.ToString();
     }
 
     void Update()
@@ -37,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
         //Se la vita è <0, allora elimina player
         if (this.health <= 0) {
             healthDisplay.text = "0";
-            losePanel.SetActive(true);
+            //losePanel.SetActive(true);
             Destroy(gameObject);
         }
     }
