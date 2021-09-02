@@ -31,9 +31,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        //Add sound to demage taken
-    
+        //Add sound DAMAGE
         //source.Play();
+
         this.health -= damageAmount;
         healthDisplay.text = health.ToString();
             
@@ -43,6 +43,16 @@ public class PlayerHealth : MonoBehaviour
             //losePanel.SetActive(true);
             Destroy(gameObject);
         }
+    }
+
+    public void TakeHealth(int healthAmount)
+	{
+        //Add sound HEALTH
+        //source.Play();
+
+        this.health += healthAmount;
+        healthDisplay.text = health.ToString();
+
     }
 
     #endregion
