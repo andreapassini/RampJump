@@ -17,8 +17,8 @@ TagManager:
   - 
   - Player
   - Obstacle
-  - 
-  - 
+  - Enemy
+  - PickUp
   - 
   - 
   - 

@@ -441,6 +441,7 @@ MonoBehaviour:
     type: 3}
   bulletForce: 18
   rechargeTime: 0.4
+  attackRate: 2
 --- !u!1 &526753398
 GameObject:
   m_ObjectHideFlags: 0
@@ -5716,7 +5717,8 @@ GameObject:
   - component: {fileID: 1876660606}
   - component: {fileID: 1876660605}
   - component: {fileID: 1876660604}
-  m_Layer: 0
+  - component: {fileID: 1876660607}
+  m_Layer: 11
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5789,7 +5791,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5331513
+  m_Radius: 2.3265212
 --- !u!4 &1876660606
 Transform:
   m_ObjectHideFlags: 0
@@ -5804,6 +5806,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1876660607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876660603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd29edda6f264c9438fb0a6dd241bbc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &1896398977
 GameObject:
   m_ObjectHideFlags: 0
