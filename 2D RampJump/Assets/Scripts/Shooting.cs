@@ -11,6 +11,9 @@ public class Shooting : MonoBehaviour
     public float bulletForce = 20f;
 
     [SerializeField] float rechargeTime = 0.5f;
+    public float attackRate = 2f;
+    float nextAttackTime;
+
     private bool isShooting;
 
 	private void Start()
@@ -21,10 +24,13 @@ public class Shooting : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
-		if (Input.GetButtonDown("Fire1") && !isShooting) {
+        if(Time.time >= nextAttackTime) {
+            if (Input.GetButtonDown("Fire1") && !isShooting) {
+                Shoot();
+                nextAttackTime = Time.time + rechargeTime;
+            }
+        }
 
-            Shoot();
-		}
     }
 
     void Shoot()
@@ -34,9 +40,10 @@ public class Shooting : MonoBehaviour
 
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
 
-        isShooting = true;
+        //Test attackRate /out Coroutine
+        //isShooting = true;
 
-        StartCoroutine(Recharge());
+        //StartCoroutine(Recharge());
 	}
 
 
