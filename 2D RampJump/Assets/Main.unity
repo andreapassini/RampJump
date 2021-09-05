@@ -1095,7 +1095,7 @@ MonoBehaviour:
   healthDisplay: {fileID: 1787583961}
   health: 0
   startingHealth: 100
-  timeAfterHealth: 1
+  timeAfterHealth: 0.001
 --- !u!1 &848288304
 GameObject:
   m_ObjectHideFlags: 3
