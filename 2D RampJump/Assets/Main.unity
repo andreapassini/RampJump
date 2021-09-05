@@ -440,8 +440,7 @@ MonoBehaviour:
   bulletPrfab: {fileID: 8347492777242367732, guid: 3b6ce2bc366c21545b46a18fd2da7358,
     type: 3}
   bulletForce: 18
-  rechargeTime: 0.4
-  attackRate: 2
+  rechargeTime: 0.35
 --- !u!1 &526753398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,7 +1015,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0029273033, y: -0.1322434}
+  m_Offset: {x: -0.0011462569, y: -0.1322434}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1027,7 +1026,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9676447, y: 0.7744956}
+  m_Size: {x: 0.87349045, y: 0.7744956}
   m_EdgeRadius: 0
 --- !u!114 &820667357
 MonoBehaviour:
@@ -1096,6 +1095,7 @@ MonoBehaviour:
   healthDisplay: {fileID: 1787583961}
   health: 0
   startingHealth: 100
+  timeAfterHealth: 1
 --- !u!1 &848288304
 GameObject:
   m_ObjectHideFlags: 3

@@ -11,7 +11,6 @@ public class Shooting : MonoBehaviour
     public float bulletForce = 20f;
 
     [SerializeField] float rechargeTime = 0.5f;
-    public float attackRate = 2f;
     float nextAttackTime;
 
     private bool isShooting;

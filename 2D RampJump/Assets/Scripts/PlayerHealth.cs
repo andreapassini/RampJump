@@ -14,6 +14,10 @@ public class PlayerHealth : MonoBehaviour
     public int health;
 
     [SerializeField] int startingHealth = 100;
+
+    [SerializeField] float timeAfterHealth = 1f;
+    float nextTimeHealth;
+
     #endregion
 
     #region Unity Methods
@@ -50,9 +54,12 @@ public class PlayerHealth : MonoBehaviour
         //Add sound HEALTH
         //source.Play();
 
-        this.health += healthAmount;
-        healthDisplay.text = health.ToString();
+        if(Time.time >= nextTimeHealth) {
+            nextTimeHealth = Time.time + timeAfterHealth;
 
+            this.health += healthAmount;
+            healthDisplay.text = health.ToString();
+        }
     }
 
     #endregion
