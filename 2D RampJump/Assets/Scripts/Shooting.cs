@@ -10,6 +10,9 @@ public class Shooting : MonoBehaviour
 
     public float bulletForce = 20f;
 
+    public Text ammoDisplay;
+    public int ammo = 10;
+    
     [SerializeField] float rechargeTime = 0.5f;
     float nextAttackTime;
 
@@ -18,12 +21,13 @@ public class Shooting : MonoBehaviour
 	private void Start()
 	{
         isShooting = false;
-	}
+        ammoDisplay.text = this.ammo.ToString();
+    }
 
-	// Update is called once per frame
-	void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if(Time.time >= nextAttackTime) {
+        if(Time.time >= nextAttackTime && this.ammo>0) {
             if (Input.GetButtonDown("Fire1") && !isShooting) {
                 Shoot();
                 nextAttackTime = Time.time + rechargeTime;
@@ -39,6 +43,8 @@ public class Shooting : MonoBehaviour
 
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
 
+        useAmmo(1);
+
         //Test attackRate /out Coroutine
         //isShooting = true;
 
@@ -46,10 +52,17 @@ public class Shooting : MonoBehaviour
 	}
 
 
-    //La funzione serve per inserire tempo di ricarica tra uno sparo ed il successivo
-    public IEnumerator Recharge()
+    //Funzione di gestione delle munizioni
+    public void useAmmo(int nAmmo)
 	{
-        yield return new WaitForSeconds(rechargeTime);
-        isShooting = false;
+        this.ammo -= nAmmo;
+        ammoDisplay.text = this.ammo.ToString();
     }
+
+    public void rechargeAmmo(int nAmmo)
+	{
+        this.ammo += nAmmo;
+        ammoDisplay.text = this.ammo.ToString();
+    }
+
 }

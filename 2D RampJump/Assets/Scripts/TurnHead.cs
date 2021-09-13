@@ -27,7 +27,7 @@ public class TurnHead : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-        rb.position = gunPos.transform.position;
+        transform.position = gunPos.transform.position;
 
         Vector2 directionToLook = mousePosition - rb.position;
         float angle = Mathf.Atan2(directionToLook.y, directionToLook.x) * Mathf.Rad2Deg - 90f;
