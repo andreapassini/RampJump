@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 221915209}
   - component: {fileID: 221915210}
   m_Layer: 8
-  m_Name: Gun
+  m_Name: RcoketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,13 +403,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221915205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58, y: 0.173, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6999999, y: -0.7469999, z: 0}
   m_LocalScale: {x: 0.22337982, y: 0.38187766, z: 0.22337982}
   m_Children:
   - {fileID: 1791387870}
-  m_Father: {fileID: 820667352}
-  m_RootOrder: 2
+  m_Father: {fileID: 901854280}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &221915207
 SpriteRenderer:
@@ -985,7 +985,6 @@ Transform:
   m_Children:
   - {fileID: 1574803884}
   - {fileID: 1007352555}
-  - {fileID: 221915206}
   - {fileID: 901854280}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1267,8 +1266,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 901854280}
+  - component: {fileID: 901854281}
   m_Layer: 8
-  m_Name: GunPos
+  m_Name: GunHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1284,10 +1284,24 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.12, y: 0.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 221915206}
   m_Father: {fileID: 820667352}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901854281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901854279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d72ca962bb0e324fa19f1389b031a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedWeapon: 0
 --- !u!1 &918509893
 GameObject:
   m_ObjectHideFlags: 0
