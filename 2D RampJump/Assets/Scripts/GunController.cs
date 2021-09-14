@@ -22,6 +22,7 @@ public class GunController : MonoBehaviour
     {
         int previusSelectedWeapon = selectedWeapon;
 
+        /*
         if(Input.GetAxis("Mouse SCrollWheel") > 0f) {
             //Mi assicuro che se giro ancora la rotellina torni alla prima
             if(selectedWeapon >= transform.childCount - 1) 
@@ -36,10 +37,20 @@ public class GunController : MonoBehaviour
             else
                 selectedWeapon--;
         }
+       
+        */
 
-        if(previusSelectedWeapon != selectedWeapon) {
-            SelctedWeapon();
+        int i = 0;
+
+        foreach(Transform weapon in transform) {
+			if (Input.GetKeyDown(i.ToString())){
+                selectedWeapon = i;
+			}
 		}
+
+        if (previusSelectedWeapon != selectedWeapon) {
+            SelctedWeapon();
+        }
     }
 
     void SelctedWeapon()
