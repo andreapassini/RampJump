@@ -11,7 +11,7 @@ public class TurnHead : MonoBehaviour
     Rigidbody2D rb;
 
     [SerializeField] GameObject player;
-    [SerializeField] GameObject gunPos;
+    [SerializeField] Transform gunPos;
 
     // Start is called before the first frame update
     void Awake()
@@ -27,10 +27,11 @@ public class TurnHead : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-        transform.position = gunPos.transform.position;
+        //transform.position = gunPos.transform.position;
 
-        Vector2 directionToLook = mousePosition - rb.position;
+        Vector2 directionToLook = mousePosition - (Vector2)gunPos.position;
         float angle = Mathf.Atan2(directionToLook.y, directionToLook.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        Quaternion angleQ = Quaternion.Euler(0f, 0f, angle);
+        gunPos.rotation = angleQ;
     }
 }
