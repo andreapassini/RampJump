@@ -16,10 +16,6 @@ public class Bullet : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		Rigidbody2D _rigidbody2D;
-
-		_rigidbody2D = collision.rigidbody;
-
 		//Effetto diverso a seconda di cosa si colpisce
 		/*
 		
