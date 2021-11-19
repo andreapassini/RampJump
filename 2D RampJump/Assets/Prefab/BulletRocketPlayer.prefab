@@ -150,4 +150,4 @@ MonoBehaviour:
     type: 3}
   destroyAfterTime: 5
   target: Enemy
-  damage: 10
+  damage: 50
