@@ -56,7 +56,7 @@ public class Movement : MonoBehaviour
 		isGrounded = false;
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
 
-		rb.velocity = new Vector2(horizontalMove * Time.fixedDeltaTime, rb.velocity.y);
+		rb.velocity = new Vector2(horizontalMove * Time.deltaTime, rb.velocity.y);
 
 		if (isJumping) {
 			
