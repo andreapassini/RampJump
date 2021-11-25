@@ -149,3 +149,5 @@ MonoBehaviour:
   hitDmgEffect: {fileID: 9198730150549848720, guid: 8971bd4e38cf53b44aa4e3b2e77ed097,
     type: 3}
   destroyAfterTime: 4
+  target: Enemy
+  damage: 50
