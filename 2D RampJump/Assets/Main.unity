@@ -1693,6 +1693,7 @@ MonoBehaviour:
   - {fileID: 1896394568}
   enemies:
   - {fileID: 2095726994}
+  player: {fileID: 820667350}
 --- !u!1 &1494346462
 GameObject:
   m_ObjectHideFlags: 0
@@ -10491,7 +10492,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 30
-      m_TileSpriteIndex: 30
+      m_TileSpriteIndex: 32
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -17650,12 +17651,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300072, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
-  - m_RefCount: 12
-    m_Data: {fileID: 21300050, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 12
+    m_Data: {fileID: 21300050, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300072, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300070, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 1
