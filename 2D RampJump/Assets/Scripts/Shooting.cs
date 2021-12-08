@@ -49,7 +49,7 @@ public class Shooting : MonoBehaviour
         //isShooting = true;
 
         //StartCoroutine(Recharge());
-	}
+    }
 
 
     //Funzione di gestione delle munizioni

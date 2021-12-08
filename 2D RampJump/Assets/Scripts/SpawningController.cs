@@ -23,6 +23,8 @@ public class SpawningController : MonoBehaviour
 
 	#region Unity Methods
 
+
+
 	// First approach:
 	//	Pre-calculate distances from root to every spawning points
 	//		(5 distance calculation)
@@ -33,7 +35,7 @@ public class SpawningController : MonoBehaviour
 	//	Root and Nodes
 	//	2 player-root distance checks
 
-
+	/*
 	private void Start()
 	{
 		//Create DT
@@ -61,6 +63,7 @@ public class SpawningController : MonoBehaviour
 
 		// start coroutine patrol
 	}
+	*/
 
 	//Player is alive?
 	public object Spawner(object o)
