@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class SpawningController : MonoBehaviour
 {
-    #region Variables
+	#region Variables
 
-    public Transform[] spwanPoints;
-    public GameObject[] enemies;
+	[Space]
+	public GameObject[] areas;
+	public float[] radiusValues;
+
+	[Space]
+	public GameObject[] enemies;
 
 	public GameObject root;
 
@@ -23,8 +27,6 @@ public class SpawningController : MonoBehaviour
 
 	#region Unity Methods
 
-
-
 	// First approach:
 	//	Pre-calculate distances from root to every spawning points
 	//		(5 distance calculation)
@@ -35,9 +37,23 @@ public class SpawningController : MonoBehaviour
 	//	Root and Nodes
 	//	2 player-root distance checks
 
-	/*
+	//Range of each areas
+	private void OnDrawGizmos()
+	{
+		int i;
+
+		for (i = 0; i < areas.Length; i++) {
+			Gizmos.color = Color.yellow;
+			Gizmos.DrawWireSphere(areas[i].transform.position, radiusValues[i]); 
+		}
+	}
+	
+
+
 	private void Start()
 	{
+
+		/*
 		//Create DT
 
 		//DT
@@ -62,29 +78,59 @@ public class SpawningController : MonoBehaviour
 
 
 		// start coroutine patrol
-	}
-	*/
+		*/
 
-	//Player is alive?
-	public object Spawner(object o)
+		//Gizmos.DrawSphere()
+
+		//CircleCollider2D[] areas = gameObject.GetComponentsInChildren<CircleCollider2D>();
+
+		StartCoroutine(PatrolSpawner());
+	}
+
+	public void SpawningPoint()
 	{
-		return null;
+		for(int i=0; i<areas.Length; i++) {
+			if(PlayerInRange(areas[i], radiusValues[i])) {
+				Spawner(areas[i]);
+			}
+		}
+	}	
+
+	
+	public void Spawner(GameObject area)
+	{
+		Debug.Log("Spawner of: " + area);
+		Instantiate(enemies[0], player.transform.position, player.transform.rotation);
+
+		Transform[] spawningPoints = new Transform[area.transform.childCount];
+
+		for (int i =0; i < area.transform.childCount; i++) {
+			spawningPoints[i] = area.transform.GetChild(i);
+		}
+		
+		foreach (Transform p in spawningPoints) {
+			Instantiate(enemies[0], p.position, p.rotation);
+		}
 	}
 
 	// DT Conditions
 
-	public object CheckDistance(object o)
+	public bool PlayerInRange(GameObject area, float range)
 	{
-		if ((player.transform.position - transform.position).magnitude < 0) {
+		//float distance = (player.transform.position - area.transform.position).magnitude;
+		float distance = Vector2.Distance(player.transform.position, area.transform.position);
+		if (distance <= range) {
+			Debug.Log(area + " IN: " + range + " => " + distance);
 			return true;
 		}
+		Debug.Log(area + " NOT in: " + range + " - " + distance);
 		return false;
 	}
 
-	public IEnumerator PatrolDT()
+	public IEnumerator PatrolSpawner()
 	{
 		while (true) {
-			dt.walk();
+			SpawningPoint();
 			yield return new WaitForSeconds(reactionTime);
 		}
 	}
