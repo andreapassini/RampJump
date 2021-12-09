@@ -100,7 +100,6 @@ public class SpawningController : MonoBehaviour
 	public void Spawner(GameObject area)
 	{
 		Debug.Log("Spawner of: " + area);
-		Instantiate(enemies[0], player.transform.position, player.transform.rotation);
 
 		Transform[] spawningPoints = new Transform[area.transform.childCount];
 
