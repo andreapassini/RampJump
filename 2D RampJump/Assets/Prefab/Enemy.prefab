@@ -136,6 +136,12 @@ MonoBehaviour:
   health: 100
   deathEffect: {fileID: 1755349173569476, guid: f993a7f8fdf564e42bade21480e31754,
     type: 3}
+  reactionTime: 3
+  range: 7
+  emotionStartingValue: 125
+  highHealth: 0
+  lowHealth: 0
+  emotionIncrease: 0
 --- !u!50 &8612294851411747895
 Rigidbody2D:
   serializedVersion: 4
